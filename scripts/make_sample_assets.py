@@ -70,8 +70,7 @@ def cover(title, tag, hue, path, kind):
         for i in range(5): d.rounded_rectangle([196, 190 + i * 70, 396, 240 + i * 70], 10, fill=acc if i == 1 else "#23252b")
         d.text((460, 190), "Untitled note", font=font(46), fill="#e7e7ea")
         for i in range(6): d.rounded_rectangle([460, 270 + i * 46, 1060 - (i % 3) * 110, 286 + i * 46], 8, fill=line)
-    d.text((60, 640), tag.upper(), font=font(24, True), fill="#8b8b96")
-    d.text((60, 54), title, font=font(54), fill="#f5f5f4")
+    # No text on the art: project cards and case-study pages already show the title and badges.
     im.save(path, "JPEG", quality=84, optimize=True, progressive=True)
 
 if __name__ == "__main__":
