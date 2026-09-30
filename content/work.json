@@ -1,0 +1,199 @@
+[
+ {
+  "slug": "northwind-dashboard",
+  "title": "Northwind Dashboard: A Fast Analytics UI",
+  "date": "September 12, 2026",
+  "category": "Personal",
+  "tags": [
+   "React",
+   "TypeScript",
+   "Node.js",
+   "PostgreSQL"
+  ],
+  "cover": "/img/projects/northwind-dashboard.jpg",
+  "blocks": [
+   {
+    "t": "quote",
+    "x": "This is sample content that ships with the quietfolio template. Replace it with your own case study."
+   },
+   {
+    "t": "h2",
+    "x": "Overview"
+   },
+   {
+    "t": "p",
+    "x": "Northwind Dashboard is a **sample** analytics app used to show how a case study page looks: a cover image, a short intro, headings, lists, code and a table, all rendered from `content/work.json`."
+   },
+   {
+    "t": "p",
+    "x": "Good case studies answer three questions quickly: what was the problem, what did you build, and what changed because of it."
+   },
+   {
+    "t": "h2",
+    "x": "The problem"
+   },
+   {
+    "t": "p",
+    "x": "Teams were exporting spreadsheets by hand every Monday. Numbers were stale by Tuesday and nobody trusted the totals."
+   },
+   {
+    "t": "h2",
+    "x": "What I built"
+   },
+   {
+    "t": "ul",
+    "x": [
+     "**Live charts** — a typed API streams aggregates so the UI never recomputes them in the browser.",
+     "**Role-based access** — admins see everything, viewers see only their team.",
+     "**CSV export** — one click, the same numbers as the screen."
+    ]
+   },
+   {
+    "t": "h2",
+    "x": "A detail worth showing"
+   },
+   {
+    "t": "p",
+    "x": "Short code snippets render in a scrollable block. For example, the query that powers the weekly chart:"
+   },
+   {
+    "t": "code",
+    "x": "SELECT date_trunc('week', created_at) AS week, sum(amount) AS total\nFROM orders\nWHERE team_id = $1\nGROUP BY 1\nORDER BY 1;"
+   },
+   {
+    "t": "h2",
+    "x": "Results"
+   },
+   {
+    "t": "table",
+    "x": [
+     [
+      "Metric",
+      "Before",
+      "After"
+     ],
+     [
+      "Weekly report time",
+      "2 hours",
+      "Instant"
+     ],
+     [
+      "Dashboard load",
+      "4.1 s",
+      "0.9 s"
+     ],
+     [
+      "Support tickets about totals",
+      "12 / month",
+      "0"
+     ]
+    ]
+   },
+   {
+    "t": "h2",
+    "x": "Links"
+   },
+   {
+    "t": "p",
+    "x": "See the [live demo](https://example.com) or read [how this template works](/blog/getting-started-with-quietfolio)."
+   }
+  ]
+ },
+ {
+  "slug": "pocket-budget",
+  "title": "Pocket Budget: Offline-First Spending Tracker",
+  "date": "June 3, 2025",
+  "category": "Personal",
+  "tags": [
+   "React Native",
+   "SQLite",
+   "TypeScript"
+  ],
+  "cover": "/img/projects/pocket-budget.jpg",
+  "blocks": [
+   {
+    "t": "h2",
+    "x": "Overview"
+   },
+   {
+    "t": "p",
+    "x": "Pocket Budget is a **sample** mobile app. The goal: log an expense in under five seconds, even with no signal."
+   },
+   {
+    "t": "h2",
+    "x": "The constraint that shapes everything"
+   },
+   {
+    "t": "p",
+    "x": "People log spending in shops, on trains and in lifts. So the app treats \"offline\" as the normal state: every write goes to a local SQLite database first and syncs later."
+   },
+   {
+    "t": "h2",
+    "x": "How it works"
+   },
+   {
+    "t": "ol",
+    "x": [
+     "Write the expense to local storage immediately.",
+     "Mark it as pending in a sync queue.",
+     "When a connection returns, push the queue and pull remote changes.",
+     "Resolve conflicts by last-write-wins per field."
+    ]
+   },
+   {
+    "t": "h2",
+    "x": "What I'd do differently"
+   },
+   {
+    "t": "p",
+    "x": "Conflict resolution by timestamp is simple but can drop edits made on two devices at once. A per-field vector clock would be the next step."
+   }
+  ]
+ },
+ {
+  "slug": "plainfile-cli",
+  "title": "Plainfile CLI: Sync Folders of Text",
+  "date": "February 20, 2025",
+  "category": "Open Source",
+  "tags": [
+   "Node.js",
+   "CLI",
+   "TypeScript"
+  ],
+  "cover": "/img/projects/plainfile-cli.jpg",
+  "blocks": [
+   {
+    "t": "h2",
+    "x": "Overview"
+   },
+   {
+    "t": "p",
+    "x": "Plainfile is a **sample** command-line tool that keeps folders of plain text files in sync, with a `--dry-run` mode so you can see changes before they happen."
+   },
+   {
+    "t": "h2",
+    "x": "Usage"
+   },
+   {
+    "t": "code",
+    "x": "npm install -g plainfile\nplainfile sync ./notes ./backup --dry-run\nplainfile sync ./notes ./backup"
+   },
+   {
+    "t": "h2",
+    "x": "Design goals"
+   },
+   {
+    "t": "ul",
+    "x": [
+     "**Predictable** — the same inputs always produce the same result.",
+     "**Reversible** — nothing is deleted without a confirmation or a backup.",
+     "**Fast** — content hashes are cached between runs."
+    ]
+   },
+   {
+    "t": "p",
+    "x": "The source is on [GitHub](https://github.com/octocat/Hello-World)."
+   }
+  ]
+ }
+]

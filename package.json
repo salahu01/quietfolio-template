@@ -1,0 +1,58 @@
+{
+  "name": "quietfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "validate": "node scripts/validate-content.mjs",
+    "check": "npm run lint && npm run typecheck && npm run validate && npm run build",
+    "resume": "bash scripts/make_resume_pdf.sh",
+    "deploy:pages": "bash scripts/deploy_pages.sh"
+  },
+  "dependencies": {
+    "framer-motion": "^13.4.6",
+    "lucide-react": "^1.49.0",
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.8",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.9"
+  },
+  "description": "A minimal, fast, accessible and SEO-first developer portfolio template: Next.js, Tailwind CSS, projects, case studies and a blog.",
+  "license": "MIT",
+  "author": "Muhammed Swalahudheen C V",
+  "keywords": [
+    "portfolio",
+    "developer-portfolio",
+    "nextjs",
+    "tailwindcss",
+    "minimal",
+    "blog",
+    "seo",
+    "template",
+    "open-source"
+  ],
+  "homepage": "https://salahu01.github.io/quietfolio/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salahu01/quietfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/salahu01/quietfolio/issues"
+  }
+}
