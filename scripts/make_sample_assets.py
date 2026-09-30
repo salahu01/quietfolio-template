@@ -16,17 +16,19 @@ def hsl(h, s, l):
     import colorsys
     r, g, b = colorsys.hls_to_rgb(h / 360, l, s); return (int(r * 255), int(g * 255), int(b * 255))
 
-# ---------- avatar: symmetric 7x7 pixel identicon ----------
-def avatar(seed="sample", path="public/img/avatar.jpeg"):
-    rnd = random.Random(int(hashlib.md5(seed.encode()).hexdigest(), 16))
-    hue = rnd.randrange(360); fg = hsl(hue, .65, .62); bg = hsl(hue, .35, .12)
-    n, cell = 7, 100
-    im = Image.new("RGB", (800, 800), bg); d = ImageDraw.Draw(im)
-    grid = [[rnd.random() > .48 for _ in range(4)] for _ in range(n)]
-    for y in range(n):
-        for x in range(n):
-            if grid[y][x if x < 4 else n - 1 - x]:
-                d.rectangle([50 + x * cell, 50 + y * cell, 50 + (x + 1) * cell - 1, 50 + (y + 1) * cell - 1], fill=fg)
+# ---------- avatar: neutral head-and-shoulders silhouette (generic profile placeholder) ----------
+def avatar(path="public/img/avatar.jpeg", hue=215):
+    S, K = 800, 3  # output size, supersampling factor for smooth edges
+    W = S * K
+    im = Image.new("RGB", (W, W)); d = ImageDraw.Draw(im)
+    top, bot = hsl(hue, .35, .20), hsl(hue + 25, .40, .09)
+    for y in range(W):
+        t = y / W; d.line([(0, y), (W, y)], fill=tuple(int(top[i] + (bot[i] - top[i]) * t) for i in range(3)))
+    body = hsl(hue, .30, .50)
+    d.ellipse([W * .14, W * .66, W * .86, W * 1.34], fill=body)             # shoulders
+    d.rectangle([W * .44, W * .44, W * .56, W * .72], fill=body)  # neck (top hidden inside the head)
+    d.ellipse([W * .32, W * .19, W * .68, W * .57], fill=body)            # head (drawn after neck)
+    im = im.resize((S, S), Image.LANCZOS)
     im.save(path, quality=90, optimize=True, progressive=True)
 
 # ---------- covers: abstract UI mock on a gradient ----------
