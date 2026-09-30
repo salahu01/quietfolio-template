@@ -6,30 +6,7 @@ Built with **Next.js (App Router)**, **Tailwind CSS v4** and **Framer Motion**. 
 **Live demo:** https://salahu01.github.io/quietfolio/ (sample content)
 
 <p align="center">
-  <img src="docs/screenshots/home-dark.png" alt="quietfolio home page in the dark theme, with the pixel-art banner and cursor trail" width="860">
-</p>
-
-## Screenshots
-<table>
-  <tr>
-    <td width="50%"><img src="docs/screenshots/home-light.png" alt="Home page in the light theme"><br><sub><b>Light theme</b>, no flash on load</sub></td>
-    <td width="50%"><img src="docs/screenshots/command-palette.png" alt="Command palette search"><br><sub><b>⌘K command palette</b> searches sections, case studies and posts</sub></td>
-  </tr>
-  <tr>
-    <td><img src="docs/screenshots/projects.png" alt="Filterable project cards"><br><sub><b>Projects</b> with filters and live, repo and case-study links</sub></td>
-    <td><img src="docs/screenshots/case-study.png" alt="A case study page"><br><sub><b>Case studies</b> rendered from JSON: code, tables, quotes, lists</sub></td>
-  </tr>
-  <tr>
-    <td colspan="2"><img src="docs/screenshots/blog-post.png" alt="A blog post"><br><sub><b>Blog</b> with reading time, RSS and per-post social images</sub></td>
-  </tr>
-</table>
-
-**Mobile**
-
-<p>
-  <img src="docs/screenshots/mobile-home.png" alt="Home on a phone" width="240">
-  <img src="docs/screenshots/mobile-projects.png" alt="Projects on a phone" width="240">
-  <img src="docs/screenshots/mobile-case-study.png" alt="A case study on a phone" width="240">
+  <img src="docs/cover.jpg" alt="quietfolio: a minimal, fast, open-source portfolio template" width="100%">
 </p>
 
 ## Use it
@@ -66,7 +43,6 @@ npm run dev        # http://localhost:3000
 | `npm run check` | Everything above, in order (what CI runs) |
 | `npm run deploy:pages` | Static export → `gh-pages` branch (GitHub Pages) |
 | `npm run resume` | Regenerate `public/resume.pdf` |
-| `node scripts/make_screenshots.mjs` | Regenerate the README screenshots (see the script header) |
 
 ## Content format
 Blocks: `h2`, `h3`, `p`, `ul`, `ol`, `quote`, `code`, `img`, `table`. Inline: `**bold**`, `*italic*`, `` `code` ``, `[text](url)`. See the sample posts in `content/blog.json`.
