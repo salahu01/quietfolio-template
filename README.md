@@ -3,7 +3,7 @@
 A minimal, fast, accessible and SEO-first developer portfolio template with projects, case studies and a blog.
 Built with **Next.js (App Router)**, **Tailwind CSS v4** and **Framer Motion**. Fully static, no backend.
 
-**Live demo:** https://salahu01.github.io/quietfolio/ (sample content)
+**Live demo:** https://salahu01.github.io/quietfolio-showcase/ (sample content)
 
 <p align="center">
   <img src="docs/cover.jpg" alt="quietfolio: a minimal, fast, open-source portfolio template" width="100%">
