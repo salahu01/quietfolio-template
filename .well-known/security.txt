@@ -1,0 +1,4 @@
+Contact: mailto:hello@example.com
+Expires: 2027-10-02T10:37:42.638Z
+Preferred-Languages: en
+Canonical: https://salahu01.github.io/quietfolio-template/.well-known/security.txt
