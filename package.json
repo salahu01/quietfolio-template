@@ -50,9 +50,9 @@
   "homepage": "https://salahu01.github.io/quietfolio-template/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/salahu01/quietfolio.git"
+    "url": "git+https://github.com/salahu01/quietfolio-template.git"
   },
   "bugs": {
-    "url": "https://github.com/salahu01/quietfolio/issues"
+    "url": "https://github.com/salahu01/quietfolio-template/issues"
   }
 }
