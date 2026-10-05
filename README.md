@@ -12,7 +12,7 @@ Built with **Next.js (App Router)**, **Tailwind CSS v4** and **Framer Motion**. 
 ## Use it
 Click **Use this template** on GitHub, or:
 ```bash
-git clone https://github.com/salahu01/quietfolio my-site && cd my-site
+git clone https://github.com/salahu01/quietfolio-template my-site && cd my-site
 nvm use            # Node 22 (.nvmrc)
 npm install
 npm run dev        # http://localhost:3000
